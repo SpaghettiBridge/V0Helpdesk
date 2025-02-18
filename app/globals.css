@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Nunito:wght@400;700&display=swap');
+
+:root {
+  --primary-blue: #00697F;
+  --primary-orange: #DF6F2A;
+  --secondary-light-blue: #DDEDEE;
+  --secondary-light-orange: #E2A37A;
+  --secondary-cream: #EEE8E1;
+  --secondary-brown: #513C35;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--secondary-cream);
+  color: var(--secondary-brown);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--primary-blue);
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+/* Override Sheet component styles */
+[role="dialog"] > [data-state] {
+  width: 50% !important;
+  max-width: none !important;
+}
+
+/* Rest of your existing styles */
+[data-panel] {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-panel-resize-handle] {
+  width: 8px !important;
+  background-color: #e2e8f0;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-panel-resize-handle]:hover {
+  background-color: #cbd5e0;
+}
+
+[data-panel-resize-handle][data-resize-handle-active] {
+  background-color: #a0aec0;
+}
+
+.resize-handle {
+  cursor: ew-resize;
+  width: 8px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.resize-handle:hover {
+  background-color: #cbd5e0;
+}
+
+.resize-handle:active {
+  background-color: #a0aec0;
+}
+
